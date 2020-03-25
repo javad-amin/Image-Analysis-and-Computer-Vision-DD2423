@@ -1,0 +1,37 @@
+phonecalc = phonecalc128;
+few = few128;
+nallo = nallo128;
+
+spr = 4spc
+
+subplot(3,3,1)
+showgrey(phonecalc);
+subplot(3,3,2)
+showgrey(few);
+title('Original Images');
+subplot(3,3,3)
+showgrey(nallo);
+
+subplot(3,3,4)
+showgrey(gaussfft(phonecalc, 0.1));
+subplot(3,3,5)
+showgrey(gaussfft(few, 0.1));
+title('Gaussian convolution (t=0.1)');
+subplot(3,3,6)
+showgrey(gaussfft(nallo, 0.1));
+
+subplot(3,3,7)
+showgrey(gaussfft(phonecalc, 0.3));
+subplot(3,3,8)
+showgrey(gaussfft(few, 0.3));
+title('Gaussian convolution (t=0.3)');
+subplot(3,3,9)
+showgrey(gaussfft(nallo, 0.3));
+
+subplot(3,3,7)
+showgrey(gaussfft(phonecalc, 0.3));
+subplot(3,3,8)
+showgrey(gaussfft(few, 0.3));
+title('Gaussian convolution (t=0.3)');
+subplot(3,3,9)
+showgrey(gaussfft(nallo, 0.3));

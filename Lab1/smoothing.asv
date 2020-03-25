@@ -1,0 +1,69 @@
+office = office256;
+
+add = gaussnoise(office, 16);
+sap = sapnoise(office, 0.1, 255);
+
+spr = 2; spc = 3;
+
+%Figure 1
+figure;
+subplot(spr,spc,1)
+showgrey(office);
+title('Original');
+
+subplot(spr,spc,2)
+showgrey(add);
+title('Gaussnoise');
+
+subplot(spr,spc,3)
+showgrey(sap);
+title('Sapnoise');
+
+subplot(spr,spc,5)
+showgrey(gaussfft(add, 3));
+title('Smoothing with gaussfft');
+
+subplot(spr,spc,6)
+showgrey(gaussfft(sap, 3));
+
+%Figure 2
+figure;
+subplot(spr,spc,1)
+showgrey(office);
+title('Original');
+
+subplot(spr,spc,2)
+showgrey(add);
+title('Gaussnoise');
+
+subplot(spr,spc,3)
+showgrey(sap);
+title('Sapnoise');
+
+subplot(spr,spc,5)
+showgrey(medfilt(add, 3));
+title('Smoothing with median filtering');
+
+subplot(spr,spc,6)
+showgrey(medfilt(sap, 3));
+
+%Figure 3
+figure;
+subplot(spr,spc,1)
+showgrey(office);
+title('Original');
+
+subplot(spr,spc,2)
+showgrey(add);
+title('Gaussnoise');
+
+subplot(spr,spc,3)
+showgrey(sap);
+title('Sapnoise');
+
+subplot(spr,spc,5)
+showgrey(ideal(add, 3));
+title('Smoothing with ideal filtering');
+
+subplot(spr,spc,6)
+showgrey(medfilt(sap, 3));

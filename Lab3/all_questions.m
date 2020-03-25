@@ -1,0 +1,30 @@
+function all_questions()
+  addpath('.');
+  addpath('functions');
+  addpath('bildat_lab3');
+  addpath('../vendor');
+  addpath('../DD2423_Lab_Files/Images');
+  addpath('../DD2423_Lab_Files/Images-m');
+  addpath('../DD2423_Lab_Files/Images-mat');
+  addpath('../DD2423_Lab_Files/Functions');
+  question1();
+  pause; close all;
+  question2();
+  pause; close all;
+  question3();
+  pause; close all;
+  question4();
+  pause; close all;
+  question5();
+  pause; close all;
+  question7();
+  pause; close all;
+  question11();
+  pause; close all;
+  question12();
+  pause; close all;
+  question13();
+  pause; close all;
+  question14();
+  pause; close all;
+end
